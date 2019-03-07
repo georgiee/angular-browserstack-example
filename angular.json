@@ -1,0 +1,33 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "simple-website-e2e": {
+      "root": "e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": { },
+          "configurations": {
+            "local": {
+              "protractorConfig": "e2e/local.conf.js"
+            },
+            "browserstack": {
+              "protractorConfig": "e2e/browserstack.conf.js"
+            },
+            "browserstack-multi": {
+              "protractorConfig": "e2e/browserstack-multi.conf.js"
+            },
+            "browserstack-remote": {
+              "protractorConfig": "e2e/browserstack-remote.conf.js"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "simple-website"
+}
